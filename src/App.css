@@ -7,6 +7,8 @@ body {
   margin: 0 8px;
 }
 
+button:focus {outline:0;}
+
 * {
   box-sizing: border-box;
 }
@@ -24,9 +26,10 @@ body {
   background-color: white;
   border-radius: 10px;
   height: 70%;
-  padding: 10px;
   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .App {
@@ -47,6 +50,88 @@ body {
 
 .App-title {
   font-size: 1.5em;
+}
+
+/* Custom */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.row.vertical {
+  flex-direction: column;
+}
+
+#InputField {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-grow: 4;
+}
+
+#Display {
+  flex-grow: 2;
+  position: relative;
+
+}
+
+#Display h1 {
+  margin: 0;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  font-size: 3em;
+}
+
+#History {
+  flex-grow: 1;
+  background-color: black;
+}
+
+#InputField #NumberField {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+#InputField #OperationField {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #ECD169 , #DE9A68);
+}
+
+#OperationField .Button {
+  border-right: none;
+  border-bottom: none;
+  color: white;
+}
+
+#InputField .Button {
+  border-left: none;
+  border-bottom: none;
+}
+
+.Button {
+  border: 1px solid #e6e6e6;
+  flex: 1;
+  background: transparent;
+  font-size: 1.2em;
+  padding: 0;
+}
+
+.Button:active {
+  background-color: #e6e6e6;
+}
+
+.Button.zero {
+  border-bottom-left-radius: 10px;
+  flex-grow: 2;
+}
+
+#OperationField, #OperationField .Button:last-child {
+  border-bottom-right-radius: 10px;
 }
 
 .App-intro {

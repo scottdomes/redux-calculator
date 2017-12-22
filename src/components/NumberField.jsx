@@ -25,7 +25,7 @@ class NumberField extends React.Component {
             <Button>3</Button>
         </div>
         <div className="row">
-            <Button>0</Button>
+            <Button className="zero">0</Button>
             <Button>,</Button>
         </div>
       </div>
