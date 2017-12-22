@@ -4,9 +4,10 @@ import NumberField from './NumberField'
 
 class InputField extends React.Component {
     render() {
+      const { onClickNumber, onClickOperator } = this.props
       return <div id="InputField">
-        <NumberField />  
-        <OperationField />        
+        <NumberField onClickNumber={onClickNumber} />  
+        <OperationField onClickOperator={onClickOperator} />        
       </div>
     }
 
